@@ -1,4 +1,3 @@
-matrix = [[7.6, 5.8, 4.7], [3.8, 4.1, 2.7], [2.9, 2.1, 3.8]]
 b = [10.1, 9.7, 7.8]
 for i in range(len(matrix)):
     for j in range(len(matrix)):
@@ -15,10 +14,10 @@ print(b)
 
 x0 = [0] * len(matrix)
 x1 = [0] * len(matrix)
-x = [[0] * len(matrix)] * 2
-print(x[1][2])
+x = [[0] * len(matrix)] * len(matrix)
+print(x)
 
-for counter in range(2):
+for counter in range(len(matrix) - 1):
     for i in range(len(matrix)):
         for j in range(len(matrix)):
             x[counter + 1][i] += x[counter][j] * matrix[i][j]
